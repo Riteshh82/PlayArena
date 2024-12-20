@@ -7,12 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .faq-answer {
-            display: none;
-            padding: 1rem 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1.5rem;
+            opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
         }
-        
-        .faq-question.active + .faq-answer {
-            display: block;
+
+        .faq-answer.active {
+            max-height: 200px;
+            padding: 1rem 1.5rem;
+            opacity: 1;
         }
 
         .rotate {
@@ -22,6 +27,10 @@
 
         .arrow {
             transition: transform 0.3s ease;
+        }
+
+        .faq-question {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -77,11 +86,11 @@
         const answer = document.getElementById('answer-' + index);
         const arrow = document.querySelectorAll('.faq-question')[index].querySelector('.arrow');
 
-        if (answer.style.display === "block") {
-            answer.style.display = "none";
+        if (answer.classList.contains("active")) {
+            answer.classList.remove("active");
             arrow.classList.remove("rotate");
         } else {
-            answer.style.display = "block";
+            answer.classList.add("active");
             arrow.classList.add("rotate");
         }
     }

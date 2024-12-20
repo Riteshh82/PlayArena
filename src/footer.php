@@ -32,7 +32,7 @@
 </head>
 <body class="bg-gray-100">
 
-<section class=" text-white bg-gradient-to-r" style="background: linear-gradient(to right, #000000, #130F40); flex flex-col items-center">
+<section class=" text-white bg-gradient-to-r" style="background: linear-gradient(to right, #000000, #434343); flex flex-col items-center">
     <div class="flex flex-col md:flex-row w-full mb-8">
         <div class="flex-1 flex flex-col justify-start mr-10 m-10 p-14">
             <span class="text-4xl font-bold">PlayArena</span>
@@ -71,7 +71,7 @@
             ];
 
             foreach ($footerLinks as $link) {
-                echo '<div class="flex flex-col ss:my-0 my-4 min-w-[150px] m-10 pt-14">';
+                echo '<div class="flex flex-col ss:my-0 my-4 min-w-[150px] m-10 pt-20">';
                 echo '<h4 class="font-poppins font-medium text-[18px] leading-[27px] text-white">' . $link['title'] . '</h4>';
                 echo '<ul class="list-none mt-4">';
                 foreach ($link['links'] as $item) {

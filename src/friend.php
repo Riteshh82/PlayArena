@@ -8,9 +8,9 @@
 </head>
 <body class="bg-gray-100">
 
-<section class="flex justify-center items-center m-10 my-20 py-10 px-6 sm:flex-row flex-col bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl shadow-lg">
+<section class="flex justify-center items-center m-10 my-20 py-10 px-6 h-72 sm:flex-row flex-col bg-[linear-gradient(to_right,_#000000,_#434343)] rounded-2xl shadow-lg relative">
     <div class="flex-1 flex-col ml-10">
-        <h2 class="text-3xl text-white font-bold">
+    <h2 class="text-3xl font-bold bg-gradient-to-r from-[#1d976c] to-[#93f9b9] bg-clip-text text-transparent">
             Book Your Turf, Own the Game!
         </h2>
         <p class="text-white mt-5 max-w-lg">
@@ -18,8 +18,8 @@
         </p>
     </div>
 
-    <div class="sm:mt-10 items-center mr-10">
-        <img src="public/img/friend.png" alt="friend" class="w-200px h-[220px] object-contain mr-5 m-2">
+    <div class="sm:mt-10 items-center">
+        <img src="public/img/friend.png" alt="friend" class="absolute w-[450px] h-[371px] -top-32 right-[32px]">
     </div>
 </section>
 
