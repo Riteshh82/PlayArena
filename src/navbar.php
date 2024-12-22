@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
 <link href="/public/custom.css" rel="stylesheet">
 <link href="/public/style.css" rel="stylesheet">
         <div class="logo">
@@ -13,4 +13,4 @@
                 <li><a href="#login">Login</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->

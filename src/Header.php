@@ -14,11 +14,10 @@
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="home.html">Home</a></li>
                 <li><a href="about-us.html">About Us</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="contact.php#Contactus">Contact Us</a></li>
                 <li><a href="#book-now">Book Now</a></li>
-                <li><a href="#login">Login</a></li>
+                <li><a href="/src/login.php">Login</a></li>
             </ul>
         </nav>
     </header>

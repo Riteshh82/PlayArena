@@ -46,16 +46,16 @@
 
     <div class="flex justify-center items-center my-20 p-10 h-96 sm:flex-row flex-col bg-black shadow-lg relative">
         <div class="flex-1 flex flex-col ml-10">
-            <h2 class="text-3xl font-bold bg-gradient-to-r from-[#1d976c] to-[#93f9b9] bg-clip-text text-transparent">
+            <h2 class="text-5xl font-bold pb-2 bg-gradient-to-r from-[#1d976c] to-[#93f9b9] bg-clip-text text-transparent">
                 Where Friends Reunite, Memories <br> Are Made, and Laughter Never Ends
             </h2>
-            <p class="text-white mt-5 max-w-lg text-wrap">
+            <p class="text-white text-lg mt-5 max-w-lg text-wrap">
                 Reconnect, laugh, and create unforgettable moments with the people who matter most—because every meeting with friends is a celebration of life.
             </p>
         </div>
 
         <div class="relative sm:mt-10 items-center">
-            <img src="public/img/booking.png" alt="Children playing" class="w-[500px] h-[430px] p-16">
+            <img src="public/img/booking.png" alt="Children playing" class="w-[600px] h-[516px] p-16">
         </div>
     </div>
 </body>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frequently Asked Questions</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion"></script>  <!-- Adding Framer Motion for animations -->
     <style>
         .faq-answer {
             max-height: 0;
@@ -32,6 +33,21 @@
         .faq-question {
             cursor: pointer;
         }
+
+        /* Animation for fade-in effect */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -39,7 +55,7 @@
 <section id="faq" class="text-black py-16">
     <div class="container mx-auto px-4">
         <h2 class="text-4xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
-        <div class="space-y-4">
+        <div class="space-y-4 mx-28">
             <?php
             $faqs = [
                 [
@@ -71,7 +87,7 @@
                             </svg>
                         </span>
                     </button>
-                    <div class="faq-answer" id="answer-' . $index . '">
+                    <div class="faq-answer fade-in" id="answer-' . $index . '">
                         <p class="py-4 px-6">' . $faq['answer'] . '</p>
                     </div>
                 </div>';
@@ -82,18 +98,43 @@
 </section>
 
 <script>
+    let openIndex = null; // Track the currently open FAQ index
+
     function toggleAnswer(index) {
         const answer = document.getElementById('answer-' + index);
         const arrow = document.querySelectorAll('.faq-question')[index].querySelector('.arrow');
 
-        if (answer.classList.contains("active")) {
+        // If the same FAQ is clicked, close it
+        if (openIndex === index) {
             answer.classList.remove("active");
             arrow.classList.remove("rotate");
+            openIndex = null;
         } else {
+            // Close the previously open FAQ if any
+            if (openIndex !== null) {
+                const previousAnswer = document.getElementById('answer-' + openIndex);
+                const previousArrow = document.querySelectorAll('.faq-question')[openIndex].querySelector('.arrow');
+                previousAnswer.classList.remove("active");
+                previousArrow.classList.remove("rotate");
+            }
+
+            // Open the clicked FAQ
             answer.classList.add("active");
             arrow.classList.add("rotate");
+            openIndex = index; // Set the current FAQ as open
         }
     }
+
+    // Adding scroll animations using Framer Motion (animation on scroll into view)
+    const faqs = document.querySelectorAll('.faq-answer');
+    window.addEventListener('scroll', () => {
+        faqs.forEach(faq => {
+            const rect = faq.getBoundingClientRect();
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                faq.classList.add('fade-in');
+            }
+        });
+    });
 </script>
 
 </body>
