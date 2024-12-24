@@ -9,17 +9,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Play Arena</h1>
-        </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="contact.php#Contactus">Contact Us</a></li>
-                <li><a href="#book-now">Book Now</a></li>
-                <li><a href="/src/login.php">Login</a></li>
-            </ul>
-        </nav>
+    <?php include 'src/navbar.php'; ?>
     </header>
 
     <section class="container1">
