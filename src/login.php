@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In Popup</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 font-sans">
     <div id="loginModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
         <div class="bg-white rounded-xl w-1/3 p-8 shadow-lg relative">
             <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path fill-rule="evenodd" d="M6.293 6.293a1 1 0 011.414 0L12 9.586l4.293-4.293a1 1 0 111.414 1.414L13.414 11l4.293 4.293a1 1 0 11-1.414 1.414L12 12.414l-4.293 4.293a1 1 0 11-1.414-1.414L10.586 11 6.293 6.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    <path fill-rule="evenodd" d="M6.293 6.293a1 1 0 011.414 0L12 9.586l4.293-4.293a1 1 0 111.414 1.414L13.414 11l4.293 4.293a1 1 0 11-1.414 1.414L12 12.414l-4.293 4.293a1 1 0 11-1.414-1.414L10.586 11 6.293 6.707a1 1 0 010-1.414z" clip-rule="evenodd" />
                 </svg>
             </button>
 
@@ -44,4 +46,5 @@
         }
     </script>
 </body>
+
 </html>
